@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useRef, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import "./assets/index.scss";
+import Layout from "./components/Layout";
+import ItemPage from "./pages/ItemPage/ItemPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import SearchPage from "./pages/SearchPage/SearchPage";
+import WelcomePage from "./pages/WelcomePage/WelcomePage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<WelcomePage />} />
+            <Route path="item" element={<ItemPage />} />
+            <Route path="search" element={<SearchPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Route>
+        </Routes>
+      </div>
+    </>
   );
 }
 
