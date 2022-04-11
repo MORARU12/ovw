@@ -8,7 +8,6 @@ export interface ISearchState {
   type?: string;
   search?: string;
   productList?: any;
-  //productList: Product[];
   query?: string;
   page?: number;
   loadedAll?: boolean;
@@ -35,9 +34,9 @@ export enum SearchActionTypes {
 }
 
 export enum SearchFeedActionTypes {
-  FETCH_SEARCH = "FETCH_SEARCH",
-  FETCH_SEARCH_SUCCESS = "FETCH_SEARCH_SUCCESS",
-  FETCH_SEARCH_ERROR = "FETCH_SEARCH_ERROR",
+  FETCH_FEED_SEARCH = "FETCH_FEED_SEARCH",
+  FETCH_FEED_SEARCH_SUCCESS = "FETCH_FEED_SEARCH_SUCCESS",
+  FETCH_FEED_SEARCH_ERROR = "FETCH_FEED_SEARCH_ERROR",
 }
 
 interface IFetchItemsAction {

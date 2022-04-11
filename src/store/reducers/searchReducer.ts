@@ -1,16 +1,6 @@
-import {
-  ISearchState,
-  SearchActionTypes,
-  TItemsAction,
-  ItemsActionTypes,
-} from "../../types/user";
+import { ISearchState, SearchActionTypes } from "../../types/user";
 
 const initialState: ISearchState = {
-  //type: "",
-  //search: "",
-  //productList: [],
-  //page: 0,
-  //loadedAll: false,
   query: "",
   loading: false,
   productsCount: 0,
@@ -24,7 +14,7 @@ export const searchReducer = (
   switch (action.type) {
     case SearchActionTypes.FETCH_SEARCH:
       // when searching, action payload is query
-      return { productList: [], query: action.payload, loading: true };
+      return { loading: true };
     case SearchActionTypes.FETCH_SEARCH_SUCCESS:
       const {
         data: { productsCount, users },
@@ -37,7 +27,7 @@ export const searchReducer = (
         query,
       };
     case SearchActionTypes.FETCH_SEARCH_ERROR:
-      return { productList: [], loading: false };
+      return { loading: false };
     default:
       return state;
   }

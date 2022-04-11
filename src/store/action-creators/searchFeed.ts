@@ -4,7 +4,10 @@ import { SearchFeedActionTypes } from "../../types/user";
 export const getSearchFeed = (query: string) => {
   return async (dispatch: any) => {
     try {
-      dispatch({ type: SearchFeedActionTypes.FETCH_SEARCH, action: query });
+      dispatch({
+        type: SearchFeedActionTypes.FETCH_FEED_SEARCH,
+        action: query,
+      });
       const response = await axios.post(
         "https://api.ownvibe.app/product/search?page=0",
         {
@@ -14,12 +17,12 @@ export const getSearchFeed = (query: string) => {
       console.log("api search feed response ", response.data.data);
 
       dispatch({
-        type: SearchFeedActionTypes.FETCH_SEARCH_SUCCESS,
+        type: SearchFeedActionTypes.FETCH_FEED_SEARCH_SUCCESS,
         payload: response.data.data,
       });
     } catch (e) {
       dispatch({
-        type: SearchFeedActionTypes.FETCH_SEARCH_ERROR,
+        type: SearchFeedActionTypes.FETCH_FEED_SEARCH_ERROR,
         payload: "error",
       });
     }

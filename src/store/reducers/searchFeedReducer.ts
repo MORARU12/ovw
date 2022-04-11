@@ -10,15 +10,15 @@ export const searchFeedReducer = (
   action: any
 ): ISearchFeedState => {
   switch (action.type) {
-    case SearchFeedActionTypes.FETCH_SEARCH:
+    case SearchFeedActionTypes.FETCH_FEED_SEARCH:
       // when searching, action payload is query
       return { productList: [], loading: true };
-    case SearchFeedActionTypes.FETCH_SEARCH_SUCCESS:
+    case SearchFeedActionTypes.FETCH_FEED_SEARCH_SUCCESS:
       return {
         productList: action.payload,
         loading: false,
       };
-    case SearchFeedActionTypes.FETCH_SEARCH_ERROR:
+    case SearchFeedActionTypes.FETCH_FEED_SEARCH_ERROR:
       return { productList: [], loading: true };
     default:
       return state;
