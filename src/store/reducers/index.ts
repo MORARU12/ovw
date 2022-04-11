@@ -1,10 +1,12 @@
-// import { userReducer } from "./userReducer";
 import { combineReducers } from "redux";
-import { feedReducer } from "./userReducer";
+import { searchFeedReducer } from "./searchFeedReducer";
+import { searchReducer } from "./searchReducer";
+import { itemsReducer } from "./userReducer";
 
 export const rootReducer = combineReducers({
-  user: feedReducer,
-  // todo: todoReducer,
+  items: itemsReducer,
+  search: searchReducer,
+  searchFeed: searchFeedReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

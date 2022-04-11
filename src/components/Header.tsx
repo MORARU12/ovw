@@ -1,19 +1,30 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import useOutsideTrigger from "../hooks/outsideTrigger";
 import { useActions } from "../hooks/useActions";
 import { useTypedSelector } from "../hooks/useTypedSelector";
 
 const Header = () => {
-  const { users, error, loading } = useTypedSelector((state) => state.user);
-  const { fetchUsers } = useActions();
+  const { productsCount, users } = useTypedSelector((state) => state.search);
+  const { getSearch } = useActions();
   const inputRef = useRef<HTMLInputElement>(null);
   const [searchValue, setSearchValue] = useState("");
-  useEffect(() => {
-    fetchUsers();
-  }, []);
+  const [closeSearchModal, setCloseSearchModal] = useState(false);
+  const wrapperRef = useRef(null);
+
+  const handleCloseSearchModal = () => {
+    setCloseSearchModal(true);
+  };
+
+  useOutsideTrigger(wrapperRef, handleCloseSearchModal);
 
   const handleSearch = (e: any) => {
     e.preventDefault();
     setSearchValue(e.target.value);
+    if (closeSearchModal) {
+      setCloseSearchModal(false);
+    }
+    getSearch(e.target.value);
     console.log(searchValue);
     // inputRef.current.blur();
   };
@@ -25,7 +36,7 @@ const Header = () => {
           <div className="logo"></div>
           <p>Ownvibe</p>
         </div>
-        <div className="search-plh">
+        <div className="search-plh" ref={wrapperRef}>
           <div className="input-plh">
             <input
               ref={inputRef}
@@ -38,31 +49,32 @@ const Header = () => {
           </div>
           <div
             className="drop-down"
-            style={{ display: searchValue ? "initial" : "none" }}
+            style={{
+              display: searchValue && !closeSearchModal ? "initial" : "none",
+            }}
           >
-            <p>items button</p>
-
-            {users
-              .filter((user) => {
-                if (searchValue == "") {
-                  return user.user.username;
-                } else if (
-                  user.user.username
-                    .toLowerCase()
-                    .includes(searchValue.toLowerCase())
-                ) {
-                  return user.user.username;
-                }
-              })
-              .map((user) => {
-                return (
-                  <>
-                    <div className="play-icon"></div>
-                    <div className="hashtag-icon"></div>
-                    <p key={user.id}>{user.user.username}</p>
-                  </>
-                );
-              })}
+            <Link to="/search">
+              <p style={{ color: "red" }}>products count: {productsCount}</p>
+            </Link>
+            <p style={{ color: "blue" }}>users:</p>
+            {users?.map((user) => (
+              <div key={user.id}>
+                <div>
+                  <img
+                    src={
+                      user.profileImageName === "DefaultProfile.png"
+                        ? "https://cdn.ownvibe.app/live/user/profileImage/DefaultProfile.png"
+                        : `https://cdn.ownvibe.app/live/user/profileImage/${user.id}/xs/${user.profileImageName}`
+                    }
+                    height={20}
+                    width={20}
+                  />
+                </div>
+                <p>
+                  {user.username} {user.productsCount}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 

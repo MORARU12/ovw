@@ -1,22 +1,22 @@
-import { IUserState, TUserAction, UserActionTypes } from "../../types/user";
+import { IFeedState, TItemsAction, ItemsActionTypes } from "../../types/user";
 
-const initialState: IUserState = {
-  users: [],
+const initialState: IFeedState = {
+  items: [],
   loading: false,
   error: null,
 };
 
-export const feedReducer = (
+export const itemsReducer = (
   state = initialState,
-  action: TUserAction
-): IUserState => {
+  action: TItemsAction
+): IFeedState => {
   switch (action.type) {
-    case UserActionTypes.FETCH_USERS:
-      return { users: [], loading: true, error: null };
-    case UserActionTypes.FETCH_USERS_SUCCESS:
-      return { users: action.payload, loading: false, error: null };
-    case UserActionTypes.FETCH_USERS_ERROR:
-      return { users: [], loading: false, error: action.payload };
+    case ItemsActionTypes.FETCH_ITEMS:
+      return { items: [], loading: true, error: null };
+    case ItemsActionTypes.FETCH_ITEMS_SUCCESS:
+      return { items: action.payload, loading: false, error: null };
+    case ItemsActionTypes.FETCH_ITEMS_ERROR:
+      return { items: [], loading: false, error: action.payload };
     default:
       return state;
   }
