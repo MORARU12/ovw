@@ -52,20 +52,17 @@ const ItemPage = (props: any) => {
           </section>
           <div className="modal-items-scroll">
             <div className="modal-item">
-              {/* <Page
-            direction="vertical"
-            currentPage={currentPage}
-            onChangePage={(index) => {
-              setCurrentPage(index);
-            }}
-            style={{
-              width: 200,
-            }}
-          >
-            {pages}
-          </Page> */}
+              <Page
+                direction="vertical"
+                currentPage={currentPage}
+                onChangePage={(index) => {
+                  setCurrentPage(index);
+                }}
+              >
+                {pages}
+              </Page>
               {/* {pages} */}
-              <div className="react-player">
+              {/* <div className="react-player">
                 <ReactPlayer
                   className="react-player-v"
                   width="100%"
@@ -83,7 +80,7 @@ const ItemPage = (props: any) => {
                     "https://videodelivery.net/dd847980982c499f885d6d305172cc60/manifest/video.m3u8"
                   }
                 />
-              </div>
+              </div> */}
               {/* <img
             className="item-img"
             src="https://cdn.ownvibe.app/live/product/70/videoThumbnail.jpg"

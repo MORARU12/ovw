@@ -998,11 +998,13 @@ footer {
 }
 
 .react-player {
-  position: absolute;
+  position: relative;
   top: 0;
   bottom: 0;
   height: 100%;
   width: 100%;
+  margin: 0;
+  margin-bottom: -20px;
 }
 
 .react-player-v {

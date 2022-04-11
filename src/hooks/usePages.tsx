@@ -10,20 +10,32 @@ export default (scale = 1, pageCount = 5) => {
         <motion.div
           key={i}
           style={{
-            height: 320 * scale,
-            width: 200 * scale,
-            borderRadius: 16,
-            border: "8px solid rgba(255, 255, 255, .15)",
-            backgroundColor: transform(
-              i,
-              [0, pageCount - 1],
-              ["#fe0689", "#7704ff"]
-            ),
+            height: 586,
+            width: 320,
           }}
-          children={<ReactPlayer height={512} width={256} controls url={'https://videodelivery.net/dd847980982c499f885d6d305172cc60/manifest/video.m3u8'} />}
+          children={
+            <div className="react-player">
+              <ReactPlayer
+                className="react-player-v"
+                width="100%"
+                height="100%"
+                loop={true}
+                controls={false}
+                playing={true}
+                config={{
+                  file: {
+                    attributes: { preload: "auto" },
+                  },
+                }}
+                url={
+                  "https://videodelivery.net/dd847980982c499f885d6d305172cc60/manifest/video.m3u8"
+                }
+              />
+            </div>
+          }
         />
       )),
     [scale, range, pageCount]
   );
   return pages;
-}
+};
