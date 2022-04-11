@@ -143,7 +143,7 @@ textarea {
     margin-bottom: 80px;
     padding: 0 40px;
     justify-content: space-between;
-    background-color: #13131bf2;
+    background-color: #13131bfb;
     backdrop-filter: blur(5px);
     box-sizing: initial;
     display: flex;
@@ -351,7 +351,7 @@ textarea {
     .star {
       background: url(./icons/north-star.svg) 50% / cover no-repeat;
 
-      background-size: 30px;
+      background-size: 23px;
       left: -27px;
       margin: auto;
       margin-top: -29px;
@@ -368,7 +368,7 @@ textarea {
       top: inherit;
       left: inherit;
       right: -7px;
-      background-size: 27px;
+      background-size: 18px;
     }
   }
 
@@ -440,7 +440,7 @@ textarea {
 }
 
 .path-2 {
-  -webkit-transform: translateX(-17px) scale(0.87);
+  transform: translateX(-17px) scale(0.87);
 }
 
 // Items preview section
@@ -465,7 +465,7 @@ textarea {
     .star {
       background: url(./icons/north-star.svg) 50% / cover no-repeat;
 
-      background-size: 30px;
+      background-size: 23px;
       left: 75px;
       margin: auto;
       margin-top: 7px;
@@ -482,7 +482,7 @@ textarea {
       top: inherit;
       left: inherit;
       right: 75px;
-      background-size: 24px;
+      background-size: 18px;
     }
   }
 }
@@ -687,7 +687,7 @@ textarea {
 
     .star {
       background: url(./icons/north-star.svg) 50% / cover no-repeat;
-      background-size: 30px;
+      background-size: 23px;
       left: 135px;
       margin: auto;
       margin-top: 7px;
@@ -704,7 +704,7 @@ textarea {
       bottom: inherit;
       left: inherit;
       right: 135px;
-      background-size: 24px;
+      background-size: 18px;
     }
   }
 }
@@ -896,19 +896,31 @@ footer {
   bottom: 0;
   right: 0;
   overflow: hidden;
-  background-color: #13131ae7;
+  background-color: #13131a;
   z-index: 999;
   display: flex;
   align-items: center;
 }
 
-.modal-item {
+.modal-item-placeholder {
   height: 586px;
   width: 320px;
+  margin: auto;
+}
+
+.modal-items-scroll {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
   border-radius: 22px;
   background-color: black;
+}
+
+.modal-item {
+  height: 100%;
+  width: 100%;
   margin: auto;
-  // overflow: hidden;
+  background-color: black;
   .item-img {
     height: 100%;
     width: 100%;
@@ -926,26 +938,6 @@ footer {
 
     padding: 20px 18px;
   }
-
-  .absolute-icons {
-    position: absolute;
-    right: -156px;
-    height: 100%;
-    background-color: grey;
-
-    .close {
-      margin-bottom: 45px;
-    }
-
-    .move-btns {
-      display: flex;
-      flex-direction: column;
-
-      .top {
-        margin-bottom: 45px;
-      }
-    }
-  }
 }
 
 .item-info {
@@ -962,5 +954,59 @@ footer {
       width: 100%;
       object-fit: cover;
     }
+  }
+}
+
+.absolute-icons {
+  position: absolute;
+  width: 56px;
+  right: -56px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .close {
+    height: 56px;
+    width: 56px;
+    background: url(./icons/close.svg) 50% / cover no-repeat;
+    background-size: 22px;
+  }
+
+  .move-btns {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin: auto;
+
+    button {
+      height: 56px;
+      width: 56px;
+    }
+
+    .top {
+      // margin-bottom: 45px;
+      background: url(./icons/arrow-top.svg) 50% / cover no-repeat;
+      background-size: 22px;
+    }
+
+    .bottom {
+      background: url(./icons/arrow-bottom.svg) 50% / cover no-repeat;
+      background-size: 22px;
+    }
+  }
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.react-player-v {
+  video {
+    object-fit: cover;
   }
 }
