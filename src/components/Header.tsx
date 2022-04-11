@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import useOutsideTrigger from "../hooks/outsideTrigger";
 import { useActions } from "../hooks/useActions";
@@ -7,12 +7,16 @@ import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
-  const { productsCount, users } = useTypedSelector((state) => state.search);
+  const { productsCount, users, hashtags } = useTypedSelector(
+    (state) => state.search
+  );
   const { getSearch } = useActions();
   const inputRef = useRef<HTMLInputElement>(null);
   const [searchValue, setSearchValue] = useState("");
   const [closeSearchModal, setCloseSearchModal] = useState(false);
   const wrapperRef = useRef(null);
+
+  const [searchType, setSearchType] = useState("word"); // word | hashtag
 
   const handleCloseSearchModal = () => {
     setCloseSearchModal(true);
@@ -27,9 +31,13 @@ const Header = () => {
       setCloseSearchModal(false);
     }
     getSearch(e.target.value);
-    console.log(searchValue);
-    // inputRef.current.blur();
+    //console.log(searchValue);
   };
+
+  // useEffect(() => {
+  //   console.log(hashtags);
+  // }, [hashtags]);
+
   return (
     <div className="header">
       <div className="header-placeholder"></div>
@@ -55,16 +63,18 @@ const Header = () => {
               display: searchValue && !closeSearchModal ? "initial" : "none",
             }}
           >
-            <p
-              style={{ color: "red" }}
-              onClick={() => {
-                navigate("/search");
-                setCloseSearchModal(true);
-              }}
-            >
-              products count: {productsCount}
-            </p>
-            <p style={{ color: "blue" }}>users:</p>
+            {productsCount && (
+              <p
+                style={{ color: "red" }}
+                onClick={() => {
+                  navigate("/search");
+                  setCloseSearchModal(true);
+                }}
+              >
+                products count: {productsCount}
+              </p>
+            )}
+            {users && <p style={{ color: "blue" }}>users:</p>}
             {users?.map((user) => (
               <div key={user.id}>
                 <div>
@@ -83,6 +93,14 @@ const Header = () => {
                 </p>
               </div>
             ))}
+            {hashtags &&
+              hashtags?.map((hashtag) => (
+                <div key={hashtag.hashtag}>
+                  <p>
+                    "{hashtag.hashtag}" products count: {hashtag.productsCount}
+                  </p>
+                </div>
+              ))}
           </div>
         </div>
 

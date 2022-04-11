@@ -5,13 +5,14 @@ export interface IFeedState {
 }
 
 export interface ISearchState {
-  type?: string;
+  type?: string; // hashtag | word
   search?: string;
   productList?: any;
   query?: string;
   page?: number;
   loadedAll?: boolean;
   loading?: boolean;
+  hashtags?: any[]; // hashtag, productsCount
   productsCount?: number;
   users?: any[];
 }
