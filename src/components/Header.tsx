@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import useOutsideTrigger from "../hooks/outsideTrigger";
 import { useActions } from "../hooks/useActions";
 import { useTypedSelector } from "../hooks/useTypedSelector";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   const { productsCount, users } = useTypedSelector((state) => state.search);
   const { getSearch } = useActions();
   const inputRef = useRef<HTMLInputElement>(null);
@@ -53,9 +55,15 @@ const Header = () => {
               display: searchValue && !closeSearchModal ? "initial" : "none",
             }}
           >
-            <Link to="/search">
-              <p style={{ color: "red" }}>products count: {productsCount}</p>
-            </Link>
+            <p
+              style={{ color: "red" }}
+              onClick={() => {
+                navigate("/search");
+                setCloseSearchModal(true);
+              }}
+            >
+              products count: {productsCount}
+            </p>
             <p style={{ color: "blue" }}>users:</p>
             {users?.map((user) => (
               <div key={user.id}>

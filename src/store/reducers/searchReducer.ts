@@ -13,7 +13,6 @@ export const searchReducer = (
 ): ISearchState => {
   switch (action.type) {
     case SearchActionTypes.FETCH_SEARCH:
-      // when searching, action payload is query
       return { loading: true };
     case SearchActionTypes.FETCH_SEARCH_SUCCESS:
       const {

@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
-import FeedItem from "../../components/FeedItem";
 import Item from "../../components/Item";
 import { useActions } from "../../hooks/useActions";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
-import { getSearchFeed } from "../../store/action-creators/searchFeed";
 
 const SearchPage = () => {
   const { query } = useTypedSelector((state) => state.search);
@@ -29,11 +27,7 @@ const SearchPage = () => {
       </h2>
 
       <div className="feed-items">
-        {/* <FeedItem /> */}
-        {/* {loading && <FeedItem />} */}
         {!loading &&
-          //productList !== undefined &&
-          //productList != [] &&
           Array.from(productList).map((item: any) => (
             <Item key={item.id} item={item} setIsItemOpen={() => {}} />
           ))}

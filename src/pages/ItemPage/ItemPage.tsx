@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 import ReactPlayer from "react-player";
 import { Page } from "../../components/Page";
@@ -12,6 +12,13 @@ const ItemPage = (props: any) => {
   const [currentPage, setCurrentPage] = useState(0);
   const wrapperRef = useRef(null);
   useOutsideTrigger(wrapperRef, () => {});
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
 
   return ReactDOM.createPortal(
     <div ref={wrapperRef}>
