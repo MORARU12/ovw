@@ -351,12 +351,12 @@ export const Page = React.forwardRef<HTMLDivElement, PageProps>(
       <motion.div
         ref={forwardedRef}
         {...rest}
-        style={{
-          transformStyle: "preserve-3d",
-          perspective: 1200,
-          overflow: "hidden",
-          ...rest.style,
-        }}
+        // style={{
+        //   transformStyle: "preserve-3d",
+        //   perspective: 1200,
+        //   overflow: "hidden",
+        //   ...rest.style,
+        // }}
       >
         <motion.div
           ref={rContainer}
@@ -366,7 +366,7 @@ export const Page = React.forwardRef<HTMLDivElement, PageProps>(
             alignItems: "flex-start",
             justifyContent: "flex-start",
             flexDirection: isHorizontal ? "row" : "column",
-            transformStyle: "preserve-3d",
+            // transformStyle: "preserve-3d",
             height: "100%",
             width: "100%",
             ...(isHorizontal
@@ -381,7 +381,7 @@ export const Page = React.forwardRef<HTMLDivElement, PageProps>(
               ? originOffset.y
               : originOffset.y - (size.height + gap) * current,
           }}
-          transition={transition}
+          transition={{ duration: 0.5 }}
         >
           <motion.div
             ref={rDraggable}
@@ -391,14 +391,14 @@ export const Page = React.forwardRef<HTMLDivElement, PageProps>(
               gridAutoRows: "auto",
               gridAutoFlow: isHorizontal ? "column" : "row",
               gap,
-              transformStyle: "preserve-3d",
+              // transformStyle: "preserve-3d",
               width: "auto",
               ...(isHorizontal
                 ? { x: draggableOffset }
                 : { y: draggableOffset }),
             }}
             drag={isHorizontal ? "x" : "y"}
-            dragElastic={dragElastic}
+            // dragElastic={dragElastic}
             dragConstraints={{
               left: 0,
               right: 0,

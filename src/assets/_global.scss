@@ -27,7 +27,7 @@ body::-webkit-scrollbar {
 html {
   background-color: $bg--color;
   color: $text--color;
-  // background: url(./icons/grain.jpg) 50% / cover no-repeat;
+  background: url(./icons/grain.jpg) 50% / cover no-repeat;
   background-repeat: repeat;
   background-size: 165px;
   background-color: $bg--color;
@@ -133,7 +133,7 @@ textarea {
   height: 85px;
 
   section {
-    position: fixed;
+    // position: fixed;
     right: 0;
     left: 0;
     margin: auto;
@@ -143,8 +143,8 @@ textarea {
     margin-bottom: 80px;
     padding: 0 40px;
     justify-content: space-between;
-    background-color: #13131bfb;
-    backdrop-filter: blur(5px);
+    // background-color: #13131bfb;
+    // backdrop-filter: blur(5px);
     box-sizing: initial;
     display: flex;
 
