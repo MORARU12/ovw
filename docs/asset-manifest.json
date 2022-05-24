@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ovw/static/css/main.20e8d882.css",
-    "main.js": "/ovw/static/js/main.9603be8d.js",
+    "main.js": "/ovw/static/js/main.c0b1a021.js",
     "static/media/mockup-1.png": "/ovw/static/media/mockup-1.77212d63836efef317d2.png",
     "static/media/mockup-3.png": "/ovw/static/media/mockup-3.06f29ddea9571d68a722.png",
     "static/media/mockup-2.png": "/ovw/static/media/mockup-2.0df66ff7feb6535d50bc.png",
@@ -32,10 +32,10 @@
     "static/media/arrow-top.svg": "/ovw/static/media/arrow-top.30a4e98f4216507f75ee.svg",
     "static/media/arrow-bottom.svg": "/ovw/static/media/arrow-bottom.15d59ac8afeb589c3919.svg",
     "main.20e8d882.css.map": "/ovw/static/css/main.20e8d882.css.map",
-    "main.9603be8d.js.map": "/ovw/static/js/main.9603be8d.js.map"
+    "main.c0b1a021.js.map": "/ovw/static/js/main.c0b1a021.js.map"
   },
   "entrypoints": [
     "static/css/main.20e8d882.css",
-    "static/js/main.9603be8d.js"
+    "static/js/main.c0b1a021.js"
   ]
 }
