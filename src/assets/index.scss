@@ -7,6 +7,9 @@
 // global
 @import "./global";
 
+// media-queries
+@import "./mediaqueries";
+
 //google fonts
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap");
 
@@ -15,5 +18,18 @@
   font-family: "Titania";
   src: local("GoldmanBold"),
     url("./fonts/titania.regular.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "FatScript";
+  src: local("GoldmanBold"), url("./fonts/fatscript.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "FatScriptOutline";
+  src: local("GoldmanBold"),
+    url("./fonts/fatscript-outline.ttf") format("truetype");
   font-weight: bold;
 }

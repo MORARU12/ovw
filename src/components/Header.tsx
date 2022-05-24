@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import useOutsideTrigger from "../hooks/outsideTrigger";
 import { useActions } from "../hooks/useActions";
 import { useTypedSelector } from "../hooks/useTypedSelector";
@@ -43,8 +43,13 @@ const Header = () => {
       <div className="header-placeholder"></div>
       <section>
         <div className="logo-plh">
-          <div className="logo"></div>
-          <p>Ownvibe</p>
+          <NavLink
+            to=""
+            style={{ height: "fit-content", display: "flex", color: "white" }}
+          >
+            <div className="logo"></div>
+            <p>Ownvibe</p>
+          </NavLink>
         </div>
         <div className="search-plh" ref={wrapperRef}>
           <div className="input-plh">
@@ -105,15 +110,27 @@ const Header = () => {
         </div>
 
         <div className="app-buttons">
-          <button className="app-btn">
-            {/* <span>App Store</span> */}
-            <div className="apple"></div>
-          </button>
+          <a
+            target="_blank"
+            href="https://apps.apple.com/us/app/ownvibe/id1579180780"
+            rel="noopener noreferrer"
+          >
+            <button className="app-btn">
+              <span>App Store</span>
+              <div className="apple"></div>
+            </button>
+          </a>
           <div style={{ width: "20px" }}></div>
-          <button className="app-btn">
-            {/* <span>Google Play</span> */}
-            <div className="android"></div>
-          </button>
+          <a
+            target="_blank"
+            href="https://play.google.com/store/apps/details?id=com.ownvibe.app&fbclid=IwAR32C0zSQotxi01SoH1iFaYe8EioEwpF0uFG0fY9YEz0bEuAJtDWC5R78rg&ref=producthunt"
+            rel="noopener noreferrer"
+          >
+            <button className="app-btn">
+              <span>Google Play</span>
+              <div className="android"></div>
+            </button>
+          </a>
         </div>
       </section>
     </div>

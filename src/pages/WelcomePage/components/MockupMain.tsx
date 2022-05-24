@@ -6,7 +6,7 @@ const MockupMain = () => {
       <div className="iphone-mockup"></div>
       <div className="mockup-info">
         <div className="blobs">
-          <div className="blob">
+          {/* <div className="blob">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 96 96"
@@ -40,7 +40,7 @@ const MockupMain = () => {
                 ></animate>
               </path>
             </svg>
-          </div>
+          </div> */}
         </div>
         <section className="titania-texts">
           <div className="emoji"></div>

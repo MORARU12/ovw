@@ -12,7 +12,35 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+.a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+  all: unset;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.App {
+  overflow: hidden;
+}
+
 body {
+  background: $bg--color !important;
+
   -webkit-overflow-scrolling: touch;
 }
 
@@ -25,12 +53,12 @@ body::-webkit-scrollbar {
 }
 
 html {
-  background-color: $bg--color;
+  background: $bg--color !important;
   color: $text--color;
-  background: url(./icons/grain.jpg) 50% / cover no-repeat;
-  background-repeat: repeat;
-  background-size: 165px;
-  background-color: $bg--color;
+  // background: url(./icons/grain.jpg) 50% / cover no-repeat;
+  // background-repeat: repeat;
+  // background-size: 165px;
+  background-color: $bg--color !important;
 }
 
 .app--block {
@@ -39,6 +67,7 @@ html {
   margin: auto;
   display: flex;
   flex-direction: column;
+  background-color: $bg--color;
 
   .centered {
     height: fit-content;
@@ -152,6 +181,7 @@ textarea {
 
     .logo-plh {
       display: flex;
+      align-items: center;
       right: 5px;
       p {
         font-family: "Quicksand", sans-serif;
@@ -159,7 +189,7 @@ textarea {
         font-size: 19px;
         line-height: 84px;
         font-weight: 900;
-        margin-left: 10px;
+        margin-left: 15px;
       }
     }
 
@@ -168,6 +198,7 @@ textarea {
       display: flex;
       justify-content: center;
       align-items: center;
+      display: none;
       .input-plh {
         height: 44px;
         background: black;
@@ -202,10 +233,17 @@ textarea {
 .logo {
   height: 48px;
   width: 48px;
-  background: url(./icons/logo-png.png) 50% / cover no-repeat;
-  background-size: 42px;
+  background: url(./icons/main-logo.svg) 50% / cover no-repeat;
+  background-size: 44px;
   margin: auto 0;
-  filter: drop-shadow(0px -3px 15px rgba(255, 255, 255, 0.06));
+  // filter: drop-shadow(0px -3px 15px rgba(255, 255, 255, 0.06));
+
+  // background-size: 50px;
+  // margin: auto 0;
+  // background-color: black;
+  // border-radius: 18px;
+  // background-position-y: -2px;
+  // transform: scale(1.03);
 }
 
 .app-buttons {
@@ -224,15 +262,18 @@ textarea {
     font-family: "Quicksand", sans-serif;
     font-size: 15px;
     letter-spacing: 1px;
-    padding: 0 2px;
+    padding: 0 5px;
     transform: scale(0.95);
     span {
       font-family: "Quicksand", sans-serif;
+      margin-left: 10px;
+      color: #959d9d;
+      font-size: 14px;
     }
     div {
       height: 46px;
       width: 44px;
-      filter: drop-shadow(0px 1px 8px rgba(255, 255, 255, 0.6));
+      filter: drop-shadow(0px 1px 8px rgba(255, 255, 255, 0.5));
       background: url(./icons/apple.svg) 50% / cover no-repeat;
       background-position: center;
       background-position-y: 11px;
@@ -265,7 +306,7 @@ textarea {
   position: relative;
   width: 100%;
   height: 500px;
-  margin: 100px 0px;
+  margin: 100px 0px 70px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -277,8 +318,8 @@ textarea {
 }
 
 .iphone-mockup {
-  height: 500px;
-  width: 280px;
+  height: 478px;
+  width: 238px;
   margin: auto;
   right: 55px;
 
@@ -318,65 +359,68 @@ textarea {
   .emoji {
     height: 80px;
     width: 80px;
-    background: url(https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/movie-camera_1f3a5.png)
-      50% / cover no-repeat;
-    background-size: 45px;
+    background: url(../assets/icons/grain-camera.png) 50% / cover no-repeat;
+    background-size: 57px;
+    background-size: 61px;
     margin: auto;
-    margin-top: -25px;
+    margin-top: -30px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0px 1px 8px rgba(255, 255, 255, 0.29));
   }
 
   .emoji-paypal {
-    background: url(https://ownvibe.app/assets/icons/paypal3.svg) 50% / cover
-      no-repeat;
-    background-size: 41px;
+    background: url(../assets/icons/paypal-outline.svg) 50% / cover no-repeat;
+    background-size: 47px;
   }
 
   .emoji-freeze {
-    background: url(https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/cold-face_1f976.png)
-      50% / cover no-repeat;
-    background-size: 45px;
+    background: url(../assets/icons/party-outline.svg) 50% / cover no-repeat;
+    background-size: 55px;
   }
 
   h2 {
     font-weight: 700;
-    line-height: 45px;
+    line-height: 41px;
     width: 100%;
-    font-family: "Titania";
-
+    font-family: "FatScript";
     text-align: center;
-    letter-spacing: -1px;
-    text-shadow: 2px 1px 17px #ffffff75;
-    font-size: 38px;
+    letter-spacing: 3px;
+    /* text-shadow: 2px 1px 17px #ffffff75; */
+    font-size: 36px;
+    padding: 0 12px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin: 0;
 
     .star {
       background: url(./icons/north-star.svg) 50% / cover no-repeat;
 
-      background-size: 23px;
-      left: -27px;
+      background-size: 32px;
+      left: 9px;
       margin: auto;
       margin-top: -29px;
       filter: drop-shadow(0px 1px 6px rgba(255, 255, 255, 0.39));
       position: absolute;
-      top: -51px;
+      top: -69px;
 
       height: 80px;
       width: 80px;
     }
 
     .star-2 {
-      bottom: -102px;
+      bottom: -110px;
       top: inherit;
       left: inherit;
       right: -7px;
-      background-size: 18px;
+      background-size: 24px;
     }
   }
 
   p {
     font-weight: 700;
-    line-height: 35px;
-    margin-top: 5px;
-    font-size: 17px;
+    line-height: 25px;
+    margin-top: 19px;
+    font-size: 16px;
     color: #999f9f;
     letter-spacing: 2px;
     font-family: "Quicksand", sans-serif;
@@ -385,12 +429,12 @@ textarea {
   }
 }
 
-.titania-texts-left {
-  // transform: perspective(21em) rotatey(18deg) scale(1);
-}
+// .titania-texts-left {
+//   // transform: perspective(21em) rotatey(18deg) scale(1);
+// }
 
 .titania-texts-centerd {
-  left: 25px;
+  left: 10px;
 }
 
 .paypal-span {
@@ -431,6 +475,11 @@ textarea {
   height: 370px;
   width: 370px;
   margin: auto;
+
+  background: url(./icons/blob.svg) 50% / cover no-repeat;
+  background-size: 117%;
+  bottom: 20px;
+
   .blob {
     z-index: 0;
     position: absolute;
@@ -668,42 +717,60 @@ textarea {
   position: relative;
   padding-bottom: 25px;
   padding-top: 92px;
-  margin: 200px 0 150px 0;
+  margin: 150px 0 150px 0;
+
+  .emoji {
+    height: 80px;
+    width: 80px;
+    background: url(../assets/icons/partyy.png) 50% / cover no-repeat;
+    background-size: 57px;
+    margin: auto;
+    margin-top: -51px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0px 1px 8px rgba(255, 255, 255, 0.29));
+    z-index: 9;
+  }
 
   h2 {
     font-weight: 700;
-    line-height: 45px;
+    line-height: 41px;
     width: 100%;
-    font-family: "Titania";
-
+    font-family: "FatScript";
     text-align: center;
-    letter-spacing: -1px;
-    text-shadow: 2px 5px 18px #ffffff75;
-    font-size: 38px;
+    letter-spacing: 3px;
+    /* text-shadow: 2px 1px 17px #ffffff75; */
+    font-size: 36px;
+    padding: 0 12px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin: 0;
     z-index: 9;
-
-    margin-bottom: 55px;
-    // transform: perspective(21em) rotatex(22deg) scale(1);
+    margin-bottom: 35px;
 
     .star {
       background: url(./icons/north-star.svg) 50% / cover no-repeat;
       background-size: 23px;
-      left: 135px;
+      left: 68px;
       margin: auto;
       margin-top: 7px;
       filter: drop-shadow(0px 6px 6px rgba(255, 255, 255, 0.39));
       position: absolute;
-      bottom: -51px;
-
+      bottom: -1px;
       height: 80px;
       width: 80px;
     }
 
     .star-2 {
-      top: -36px;
       bottom: inherit;
       left: inherit;
+      background-size: 26px;
+      top: -130px;
       right: 135px;
+    }
+
+    .star-3 {
+      top: 230px;
+      right: -179px;
       background-size: 18px;
     }
   }
@@ -751,7 +818,7 @@ textarea {
   flex-direction: row;
   height: 70px;
   width: 100%;
-  border: 7px solid #0f0f16;
+  border: 7px solid #ddddff08;
   background: #1c1c25;
   border-radius: 25px;
   display: flex;
@@ -1010,5 +1077,106 @@ footer {
 .react-player-v {
   video {
     object-fit: cover;
+  }
+}
+
+// TERMS & SUPPORT
+
+.gradient-page-plh {
+  width: 100%;
+  @include flex-column;
+  border-radius: 40px;
+  box-sizing: border-box;
+  padding: 28px 58px;
+  background: linear-gradient(to top, #dd247600, #1c1c24);
+
+  .page-icon {
+    filter: drop-shadow(0px 1px 12px #ffffff09);
+    height: 70px;
+    width: 70px;
+    border-radius: 16px;
+    margin: 25px auto 10px auto;
+
+    background: url(./icons/support.svg) 50% / cover no-repeat;
+    background-size: 46px;
+  }
+
+  .terms {
+    background: url(./icons/terms.svg) 50% / cover no-repeat;
+    background-size: 46px;
+  }
+
+  h1 {
+    letter-spacing: 2px;
+    font-size: 21px;
+    line-height: 35px;
+    font-weight: 700;
+    padding: 0 25px;
+    text-align: center;
+    margin-bottom: 75px;
+    span {
+      display: block;
+    }
+  }
+
+  .intrro-ft {
+    width: 100%;
+    letter-spacing: 0.3px;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 700;
+    margin-top: 55px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+  }
+
+  .intrro-ft:first-of-type {
+    margin-top: 0;
+  }
+
+  .simple-ft {
+    width: 100%;
+    letter-spacing: 0.3px !important;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 23px;
+    margin: 0;
+    margin-top: 10px;
+    text-align: center;
+
+    color: #999f9f !important;
+  }
+
+  .our-email {
+    letter-spacing: 3px;
+    margin-left: 0;
+    // filter: drop-shadow(0px 1px 11px #ffffff95);
+    display: block;
+    font-size: 14px !important;
+  }
+
+  .simple-list-ft {
+    margin: 0;
+    letter-spacing: 0.3px !important;
+    font-size: 12px !important;
+    font-weight: 500;
+    display: inline-block;
+    width: 100%;
+    line-height: 21px;
+    padding-left: 17px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    text-align: center;
+
+    color: #999f9f !important;
+  }
+
+  .ft {
+    font-weight: 700;
+    font-size: 13px;
+
+    color: white !important;
   }
 }

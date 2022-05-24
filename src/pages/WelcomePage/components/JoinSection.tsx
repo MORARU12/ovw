@@ -3,10 +3,12 @@ import React from "react";
 const JoinSection = () => {
   return (
     <section className="join-section">
+      <div className="emoji"></div>
       <h2>
         <div className="star"></div>
         <div className="star star-2"></div>
-        Easy as this
+        <div className="star star-3"></div>
+        Join Now
       </h2>
 
       <div className="big-bolb-plh">

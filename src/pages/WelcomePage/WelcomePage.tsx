@@ -12,13 +12,13 @@ const WelcomePage = () => {
       <MockupMain />
 
       {/* Mockup section 2 PayPal */}
-      <MockupPayPal />
+      {/* <MockupPayPal /> */}
 
       {/* Mockup section Free */}
-      <MockupFree />
+      {/* <MockupFree /> */}
 
       {/* Items preview section */}
-      <section className="items-preview">
+      {/* <section className="items-preview">
         <h2>
           <div className="star"></div>
           <div className="star star-2"></div>
@@ -26,7 +26,7 @@ const WelcomePage = () => {
         </h2>
         <section className="items-row">
           <div className="items">
-            {/* 3 Items row feed */}
+            3 Items row feed
             <Feed />
           </div>
           <div className="item explore-bg">
@@ -57,10 +57,10 @@ const WelcomePage = () => {
             </section>
           </div>
         </section>
-      </section>
+      </section> */}
 
       {/* Join section */}
-      <JoinSection />
+      {/* <JoinSection /> */}
     </>
   );
 };

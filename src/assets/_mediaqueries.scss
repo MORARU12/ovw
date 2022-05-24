@@ -1,0 +1,180 @@
+@media (hover: hover) and (pointer: fine) {
+  .hover-icon-click {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+
+  .hover-icon-click:hover {
+    transform: scale(1.05);
+  }
+
+  .hover-icon-click:active {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+
+  .text-btn-click {
+    cursor: pointer;
+  }
+
+  .text-btn-click:active {
+    opacity: 0.5;
+  }
+}
+
+/* 800 */
+@media screen and (max-width: 850px) {
+  .body {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 0 5%;
+  }
+
+  .header {
+    section {
+      max-width: 100%;
+      min-width: fit-content;
+      padding: 0 5%;
+    }
+  }
+
+  footer {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 0 5%;
+  }
+
+  .mockup-section {
+    flex-direction: column-reverse;
+    height: fit-content;
+  }
+
+  .iphone-mockup {
+    right: 0;
+    margin-top: 50px;
+    z-index: 9;
+    filter: drop-shadow(0px 4px 29px rgba(255, 255, 255, 0.05));
+
+    height: 542px;
+    width: 281px;
+    background-size: 263px;
+  }
+
+  .mockup-section {
+    margin: 200px 0px 70px 0px;
+  }
+
+  .mockup-info {
+    width: 100%;
+  }
+
+  .blobs {
+    top: 150px;
+    height: 670px;
+    width: 100%;
+    .blob {
+      height: 670px;
+      width: 100%;
+    }
+  }
+
+  .titania-texts {
+    width: 385px;
+    margin: auto;
+  }
+}
+
+/* 600 */
+@media screen and (max-width: 600px) {
+  .blobs {
+    top: 150px;
+    transform: scale(1.4);
+  }
+
+  .app-buttons {
+    .app-btn {
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .mockup-section {
+    margin: 150px 0px 30px 0px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+}
+
+/* 550 */
+@media screen and (max-width: 550px) {
+}
+
+/* 520 */
+@media screen and (max-width: 520px) {
+}
+
+/* 450 */
+@media screen and (max-width: 450px) {
+  .blobs {
+    top: 350px;
+    transform: scale(2);
+  }
+
+  .mockup-section {
+    margin-top: 100px;
+  }
+}
+
+/* 414 */
+@media screen and (max-width: 415px) {
+}
+
+/* 375 */
+@media screen and (max-width: 376px) {
+  .titania-texts h2 .star-2 {
+    right: -27px;
+  }
+
+  .blobs {
+    top: 350px;
+    transform: scale(2.3);
+  }
+
+  .header section .logo-plh p {
+    font-size: 17px;
+  }
+}
+
+/* 375 */
+@media screen and (max-width: 350px) {
+  .blobs {
+    top: 350px;
+    transform: scale(2.3);
+  }
+}
+
+/* 320 */
+@media screen and (max-width: 321px) {
+  .blobs {
+    top: 350px;
+    transform: scale(2.7);
+  }
+
+  footer .ownvibe p {
+    margin-left: 15px;
+  }
+
+  footer .ownvibe .tiktok-icon {
+    margin-left: 15px;
+  }
+}
+
+// .active-pointer{
+// 	cursor: pointer;
+// }
+
+// .active-pointer:active{
+// 	opacity: 0.5;
+// }
