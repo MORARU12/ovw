@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 import "./assets/index.scss";
 import Layout from "./components/Layout";
 import ItemPage from "./pages/ItemPage/ItemPage";
@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <Routes>
+        <HashRouter>
           <Route path="/" element={<Layout />}>
             <Route index element={<WelcomePage />} />
             <Route path="support" element={<SupportPage />} />
@@ -22,7 +22,7 @@ function App() {
             <Route path="search" element={<SearchPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
-        </Routes>
+        </HashRouter>
       </div>
     </>
   );
