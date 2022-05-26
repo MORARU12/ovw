@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3ee6e319.css",
+    "main.js": "/static/js/main.9603be8d.js",
+    "static/media/mockup-1.png": "/static/media/mockup-1.77212d63836efef317d2.png",
+    "static/media/mockup-3.png": "/static/media/mockup-3.06f29ddea9571d68a722.png",
+    "static/media/mockup-2.png": "/static/media/mockup-2.0df66ff7feb6535d50bc.png",
+    "static/media/fatscript.ttf": "/static/media/fatscript.908af64baa476deeffb9.ttf",
+    "static/media/fatscript-outline.ttf": "/static/media/fatscript-outline.b9011d11e7477064fc70.ttf",
+    "static/media/titania.regular.ttf": "/static/media/titania.regular.abe089e0db92f44673ff.ttf",
+    "static/media/grain-camera.png": "/static/media/grain-camera.a0b6835326c1743777d2.png",
+    "static/media/party-outline.svg": "/static/media/party-outline.78223589fe9a86cce881.svg",
+    "static/media/partyy.png": "/static/media/partyy.1cc773b7cd4283aac73b.png",
+    "static/media/producthunt.svg": "/static/media/producthunt.95d29fdde9a9483cbb59.svg",
+    "static/media/paypal-outline.svg": "/static/media/paypal-outline.6e18852cbea94faf4298.svg",
+    "static/media/android.svg": "/static/media/android.9437e1b7262a9e72c77f.svg",
+    "static/media/camera.svg": "/static/media/camera.cb2494f443c8d2cae61d.svg",
+    "static/media/blob.svg": "/static/media/blob.b24ad64be533229fc79e.svg",
+    "static/media/instagram.svg": "/static/media/instagram.5317335733c3a459634a.svg",
+    "static/media/apple.svg": "/static/media/apple.7200a785af19b4655943.svg",
+    "static/media/explore.svg": "/static/media/explore.7a65881feb4b55e2babf.svg",
+    "static/media/account.svg": "/static/media/account.5eb66e5abfc1cc6e0edc.svg",
+    "static/media/north-star.svg": "/static/media/north-star.bd0fe7fae98c72253850.svg",
+    "static/media/tiktok.svg": "/static/media/tiktok.096b441d33ec1afbb487.svg",
+    "index.html": "/index.html",
+    "static/media/support.svg": "/static/media/support.b3a9af05b220c6c80eb8.svg",
+    "static/media/terms.svg": "/static/media/terms.f0170e6a91046e676f0d.svg",
+    "static/media/close.svg": "/static/media/close.cf0ce1eb575cc881e579.svg",
+    "static/media/main-logo.svg": "/static/media/main-logo.1be221140caf33875370.svg",
+    "static/media/play-plh.svg": "/static/media/play-plh.a47e93e4d6e51ad30921.svg",
+    "static/media/play-selected.svg": "/static/media/play-selected.07978a115aa8dd8c5277.svg",
+    "static/media/arrow-top.svg": "/static/media/arrow-top.ee7ade5b7f5de208553f.svg",
+    "static/media/arrow-bottom.svg": "/static/media/arrow-bottom.f7e53bce432bc1babed2.svg",
+    "main.3ee6e319.css.map": "/static/css/main.3ee6e319.css.map",
+    "main.9603be8d.js.map": "/static/js/main.9603be8d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ee6e319.css",
+    "static/js/main.9603be8d.js"
+  ]
+}
