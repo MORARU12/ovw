@@ -11,17 +11,20 @@ import WelcomePage from "./pages/WelcomePage/WelcomePage";
 
 function App() {
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Layout />} />
-        <Route index element={<WelcomePage />} />
-        <Route path="support" element={<SupportPage />} />
-        <Route path="terms" element={<TermsPage />} />
-        <Route path="item" element={<ItemPage />} />
-        <Route path="search" element={<SearchPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </div>
+    <>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<WelcomePage />} />
+            <Route path="support" element={<SupportPage />} />
+            <Route path="terms" element={<TermsPage />} />
+            <Route path="item" element={<ItemPage />} />
+            <Route path="search" element={<SearchPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Route>
+        </Routes>
+      </div>
+    </>
   );
 }
 
