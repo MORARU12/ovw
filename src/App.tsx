@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { HashRouter, Route } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import "./assets/index.scss";
 import Layout from "./components/Layout";
 import ItemPage from "./pages/ItemPage/ItemPage";
@@ -11,20 +11,17 @@ import WelcomePage from "./pages/WelcomePage/WelcomePage";
 
 function App() {
   return (
-    <>
-      <div className="App">
-        <HashRouter>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<WelcomePage />} />
-            <Route path="support" element={<SupportPage />} />
-            <Route path="terms" element={<TermsPage />} />
-            <Route path="item" element={<ItemPage />} />
-            <Route path="search" element={<SearchPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Route>
-        </HashRouter>
-      </div>
-    </>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Layout />} />
+        <Route index element={<WelcomePage />} />
+        <Route path="support" element={<SupportPage />} />
+        <Route path="terms" element={<TermsPage />} />
+        <Route path="item" element={<ItemPage />} />
+        <Route path="search" element={<SearchPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </div>
   );
 }
 
