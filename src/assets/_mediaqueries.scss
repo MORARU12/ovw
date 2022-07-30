@@ -22,6 +22,19 @@
   }
 }
 
+/* 1600 */
+@media screen and (min-width: 1448px) {
+  .items-svg {
+    max-width: 1600px;
+    background: url(./icons/items-b.svg) 50% / cover no-repeat;
+    background-size: 1445px;
+    background-position-y: -152px;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+}
+
 /* 800 */
 @media screen and (max-width: 850px) {
   .body {
@@ -79,8 +92,17 @@
   }
 
   .titania-texts {
-    width: 385px;
     margin: auto;
+    margin-bottom: 50px;
+  }
+
+  .items-svg {
+    background-size: 1145px;
+    background-position-y: 0;
+  }
+
+  .main-welcome-page {
+    margin-top: 250px;
   }
 }
 
@@ -152,6 +174,12 @@
   .blobs {
     top: 350px;
     transform: scale(2.3);
+  }
+
+  .iphone {
+    height: 521px;
+    width: 280px;
+    background-size: 255px;
   }
 }
 

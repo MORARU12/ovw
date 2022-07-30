@@ -42,6 +42,7 @@ body {
   // background: $bg--color !important;
 
   -webkit-overflow-scrolling: touch;
+  min-height: 100vh;
 }
 
 body::-webkit-scrollbar {
@@ -55,10 +56,11 @@ body::-webkit-scrollbar {
 html {
   // background: $bg--color !important;
   color: $text--color;
-  background: url(./icons/grain.jpg) 50% / cover no-repeat;
-  background-repeat: repeat;
-  background-size: 165px;
   background-color: $bg--color !important;
+
+  background: radial-gradient(farthest-side at bottom left, #000000, #13131a),
+    radial-gradient(farthest-corner at bottom right, #00000000, #000000 400px);
+  min-height: 100vh;
 }
 
 .app--block {
@@ -248,8 +250,9 @@ textarea {
 
 .app-buttons {
   height: fit-content;
+  width: fit-content;
   margin: auto;
-  margin-right: 0;
+  margin-bottom: 50px;
   display: flex;
   .app-btn {
     background-color: black;
@@ -264,6 +267,7 @@ textarea {
     letter-spacing: 1px;
     padding: 0 5px;
     transform: scale(0.95);
+
     span {
       font-family: "Quicksand", sans-serif;
       margin-left: 10px;
@@ -357,36 +361,37 @@ textarea {
   // transform: perspective(21em) rotatey(-18deg) scale(1);
   width: 100%;
 
-  .emoji {
-    height: 80px;
-    width: 80px;
-    background: url(../assets/icons/grain-camera.png) 50% / cover no-repeat;
-    background-size: 57px;
-    background-size: 61px;
-    margin: auto;
-    margin-top: -30px;
-    margin-bottom: 15px;
-    filter: drop-shadow(0px 1px 8px rgba(255, 255, 255, 0.29));
-  }
+  // .emoji {
+  //   height: 80px;
+  //   width: 80px;
+  //   background: url(../assets/icons/grain-camera.png) 50% / cover no-repeat;
+  //   background-size: 57px;
+  //   background-size: 61px;
+  //   margin: auto;
+  //   margin-top: -30px;
+  //   margin-bottom: 15px;
+  //   filter: drop-shadow(0px 1px 8px rgba(255, 255, 255, 0.29));
+  // }
 
-  .emoji-paypal {
-    background: url(../assets/icons/paypal-outline.svg) 50% / cover no-repeat;
-    background-size: 47px;
-  }
+  // .emoji-paypal {
+  //   background: url(../assets/icons/paypal-outline.svg) 50% / cover no-repeat;
+  //   background-size: 47px;
+  // }
 
-  .emoji-freeze {
-    background: url(../assets/icons/party-outline.svg) 50% / cover no-repeat;
-    background-size: 55px;
-  }
+  // .emoji-freeze {
+  //   background: url(../assets/icons/party-outline.svg) 50% / cover no-repeat;
+  //   background-size: 55px;
+  // }
+
+  margin-bottom: 50px;
 
   h2 {
     font-weight: 700;
-    line-height: 41px;
+    line-height: 49px;
     width: 100%;
     font-family: "FatScript";
     text-align: center;
     letter-spacing: 3px;
-    /* text-shadow: 2px 1px 17px #ffffff75; */
     font-size: 36px;
     padding: 0 12px;
     margin-bottom: 15px;
@@ -401,41 +406,19 @@ textarea {
       letter-spacing: 3px;
       font-size: 36px;
     }
-
-    .star {
-      background: url(./icons/north-star.svg) 50% / cover no-repeat;
-
-      background-size: 32px;
-      left: 9px;
-      margin: auto;
-      margin-top: -29px;
-      filter: drop-shadow(0px 1px 6px rgba(255, 255, 255, 0.39));
-      position: absolute;
-      top: -69px;
-
-      height: 80px;
-      width: 80px;
-    }
-
-    .star-2 {
-      bottom: -110px;
-      top: inherit;
-      left: inherit;
-      right: -7px;
-      background-size: 24px;
-    }
   }
 
   p {
     font-weight: 700;
-    line-height: 25px;
-    margin-top: 19px;
+    line-height: 30px;
     font-size: 16px;
     color: #999f9f;
     letter-spacing: 2px;
     font-family: "Quicksand", sans-serif;
     text-align: center;
-    padding: 0 37px;
+    width: 300px;
+    margin: auto;
+    margin-top: 25px;
   }
 }
 
@@ -626,6 +609,9 @@ textarea {
   .item-info {
     position: absolute;
     bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
     padding: 15px 15px;
     width: 100%;
     z-index: 9;
@@ -718,6 +704,11 @@ textarea {
     position: relative;
     bottom: 7%;
   }
+}
+
+.special-bg {
+  background: url(../assets/icons/items-b.svg) 50% / cover no-repeat;
+  background-size: cover;
 }
 
 // Path section
@@ -896,7 +887,7 @@ footer {
   margin: auto;
   display: flex;
   flex-direction: column;
-  margin: 65px auto 85px auto;
+  margin: 75px auto 75px auto;
 
   .ownvibe {
     height: fit-content;
@@ -1190,4 +1181,39 @@ footer {
 
     color: white !important;
   }
+}
+
+// New design
+
+.items-svg {
+  height: 500px;
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  background: url(./icons/items-s.svg) 50% / cover no-repeat;
+  background-size: 1445px;
+  background-position-y: -42px;
+}
+
+.main-welcome-page {
+  margin-top: 300px;
+}
+
+.welcome-logo {
+  height: 88px;
+  width: 88px;
+  background: url(./icons/main-logo.svg) 50% / cover no-repeat;
+  background-size: 54px;
+  margin: auto;
+  filter: drop-shadow(0px 1px 16px rgba(255, 255, 255, 0.09));
+}
+
+.iphone {
+  height: 604px;
+  width: 314px;
+  margin: auto;
+  right: 0;
+  background: url(./icons/phoneface.svg) 50% / cover no-repeat;
+  background-size: 295px;
+  filter: drop-shadow(0 1px 49px rgba(255, 255, 255, 0.04));
 }

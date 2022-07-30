@@ -12,6 +12,7 @@ import WelcomePage from "./pages/WelcomePage/WelcomePage";
 function App() {
   return (
     <>
+      <div className="special-bg"></div>
       <div className="App">
         <Routes>
           <Route path="/" element={<Layout />}>

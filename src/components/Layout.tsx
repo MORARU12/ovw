@@ -6,7 +6,9 @@ import Header from "./Header";
 const Layout = () => {
   return (
     <>
-      <Header />
+      <div className="items-svg"></div>
+
+      {/* <Header /> */}
       <div className="body">
         <Outlet />
       </div>

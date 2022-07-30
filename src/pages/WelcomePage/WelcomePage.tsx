@@ -8,8 +8,39 @@ import MockupPayPal from "./components/MockupPayPal";
 const WelcomePage = () => {
   return (
     <>
+      <div className="main-welcome-page">
+        <div className="welcome-logo"></div>
+        <section className="titania-texts">
+          <h2>Own a vibe not an item</h2>
+          <p>Buy & sell on Ownvibe short video marketplace</p>
+        </section>
+        <div className="app-buttons">
+          <a
+            target="_blank"
+            href="https://apps.apple.com/us/app/ownvibe/id1579180780"
+            rel="noopener noreferrer"
+          >
+            <button className="app-btn">
+              {/* <span>App Store</span> */}
+              <div className="apple"></div>
+            </button>
+          </a>
+          <div style={{ width: "26px" }}></div>
+          <a
+            target="_blank"
+            href="https://play.google.com/store/apps/details?id=com.ownvibe.app&fbclid=IwAR32C0zSQotxi01SoH1iFaYe8EioEwpF0uFG0fY9YEz0bEuAJtDWC5R78rg&ref=producthunt"
+            rel="noopener noreferrer"
+          >
+            <button className="app-btn">
+              {/* <span>Google Play</span> */}
+              <div className="android"></div>
+            </button>
+          </a>
+        </div>
+        <div className="iphone"></div>
+      </div>
       {/* Mockup section */}
-      <MockupMain />
+      {/* <MockupMain /> */}
 
       {/* Mockup section 2 PayPal */}
       {/* <MockupPayPal /> */}
