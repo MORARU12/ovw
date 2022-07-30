@@ -11,7 +11,7 @@ const WelcomePage = () => {
       <div className="main-welcome-page">
         <div className="welcome-logo"></div>
         <section className="titania-texts">
-          <h2>Own a vibe not an item</h2>
+          <h2>Experience a new way of shopping</h2>
           <p>Buy & sell on Ownvibe short video marketplace</p>
         </section>
         <div className="app-buttons">

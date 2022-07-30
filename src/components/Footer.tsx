@@ -18,12 +18,12 @@ const Footer = () => {
         >
           <div className="footer-icon tiktok-icon"></div>
         </a>
-        <NavLink to="/terms">
+        {/* <NavLink to="/terms">
           <p>Terms</p>
         </NavLink>
         <NavLink to="/support">
           <p>Support</p>
-        </NavLink>
+        </NavLink> */}
 
         <p className="grey">@2022 OWNVIBE 🤓</p>
       </section>
