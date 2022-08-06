@@ -1,5 +1,5 @@
 import React from "react";
-import AppVideo from "src/assets/icons/AppVideo";
+import AppVideo from "src/components/AppVideo";
 import Feed from "../../components/FeedItem";
 import JoinSection from "./components/JoinSection";
 import MockupFree from "./components/MockupFree";

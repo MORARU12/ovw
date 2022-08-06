@@ -1,4 +1,4 @@
-import videoSource from "./vpreview.mp4";
+import videoSource from "../assets/icons/vpreview.mp4";
 
 const AppVideo = () => {
   return (
