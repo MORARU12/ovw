@@ -9,14 +9,14 @@ const Footer = () => {
           href="https://www.instagram.com/ownvibe.app/"
           rel="noopener noreferrer"
         >
-          <div className="footer-icon ig-icon"></div>
+          <div className="footer-icon ig-icon hover-icon-click"></div>
         </a>
         <a
           target="_blank"
           href="https://www.tiktok.com/@ownvibe.app"
           rel="noopener noreferrer"
         >
-          <div className="footer-icon tiktok-icon"></div>
+          <div className="footer-icon tiktok-icon hover-icon-click"></div>
         </a>
         {/* <NavLink to="/terms">
           <p>Terms</p>
@@ -31,8 +31,9 @@ const Footer = () => {
         target="_blank"
         href="https://www.producthunt.com/posts/ownvibe"
         rel="noopener noreferrer"
+        className="ph-link"
       >
-        <section className="producthunt"></section>
+        <section className="producthunt hover-icon-click"></section>
       </a>
     </footer>
   );

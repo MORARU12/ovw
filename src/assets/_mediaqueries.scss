@@ -1,23 +1,22 @@
 @media (hover: hover) and (pointer: fine) {
-  .hover-icon-click {
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-  }
-
-  .hover-icon-click:hover {
-    transform: scale(1.05);
-  }
-
-  .hover-icon-click:active {
-    opacity: 0.5;
-    transform: scale(0.95);
-  }
-
   .text-btn-click {
     cursor: pointer;
   }
 
   .text-btn-click:active {
+    opacity: 0.5;
+  }
+
+  .hover-icon-click {
+    transition: 0.2s ease-in-out;
+  }
+
+  .hover-icon-click:hover {
+    transform: scale(1.07);
+  }
+
+  .hover-icon-click:active {
+    transform: scale(0.93);
     opacity: 0.5;
   }
 }
@@ -176,10 +175,30 @@
     transform: scale(2.3);
   }
 
+  // .iphone {
+  //   height: 521px;
+  //   width: 280px;
+  //   background-size: 255px;
+  // }
+
   .iphone {
-    height: 521px;
-    width: 280px;
-    background-size: 255px;
+    width: 290px;
+
+    .iphone-body {
+      z-index: 2;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background: url(./icons/mockup.png) 50% / cover no-repeat;
+      background-size: 295px;
+      background-size: 290px;
+    }
+
+    video {
+      width: 270px;
+      height: 510px;
+      top: 20px;
+    }
   }
 }
 

@@ -23,7 +23,7 @@ const WelcomePage = () => {
             href="https://apps.apple.com/us/app/ownvibe/id1579180780"
             rel="noopener noreferrer"
           >
-            <button className="app-btn">
+            <button className="app-btn hover-icon-click">
               {/* <span>App Store</span> */}
               <div className="apple"></div>
             </button>
@@ -34,13 +34,14 @@ const WelcomePage = () => {
             href="https://play.google.com/store/apps/details?id=com.ownvibe.app&fbclid=IwAR32C0zSQotxi01SoH1iFaYe8EioEwpF0uFG0fY9YEz0bEuAJtDWC5R78rg&ref=producthunt"
             rel="noopener noreferrer"
           >
-            <button className="app-btn">
+            <button className="app-btn hover-icon-click">
               {/* <span>Google Play</span> */}
               <div className="android"></div>
             </button>
           </a>
         </div>
         <div className="iphone">
+          <div className="iphone-body"></div>
           <AppVideo />
         </div>
       </div>

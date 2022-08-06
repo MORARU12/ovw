@@ -1,4 +1,4 @@
-var delayInMilliseconds = 1400;
+var delayInMilliseconds = 1600;
 
 window.onload = setTimeout(() => {
   document.querySelector(".preloader").style.zIndex = "-1";

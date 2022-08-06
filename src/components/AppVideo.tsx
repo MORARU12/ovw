@@ -2,7 +2,7 @@ import videoSource from "../assets/icons/vpreview.mp4";
 
 const AppVideo = () => {
   return (
-    <video controls autoPlay loop>
+    <video controls={false} autoPlay loop>
       <source src={videoSource} type="video/mp4" />
     </video>
   );
