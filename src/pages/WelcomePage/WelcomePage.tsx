@@ -1,9 +1,12 @@
 import React from "react";
+import AppVideo from "src/assets/icons/AppVideo";
 import Feed from "../../components/FeedItem";
 import JoinSection from "./components/JoinSection";
 import MockupFree from "./components/MockupFree";
 import MockupMain from "./components/MockupMain";
 import MockupPayPal from "./components/MockupPayPal";
+
+// import lol from "../../assets/icons/vpreview.mp4"
 
 const WelcomePage = () => {
   return (
@@ -37,7 +40,9 @@ const WelcomePage = () => {
             </button>
           </a>
         </div>
-        <div className="iphone"></div>
+        <div className="iphone">
+          <AppVideo />
+        </div>
       </div>
       {/* Mockup section */}
       {/* <MockupMain /> */}
